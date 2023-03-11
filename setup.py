@@ -192,6 +192,7 @@ def main():
             "-DWITH_EIGEN=OFF",
             "-DWITH_GSTREAMER=OFF",
             "-DWITH_OPENCL=OFF",
+            "-DWITH_CUDA=OFF",
 
             "-DBUILD_opencv_dnn=OFF",
             "-DBUILD_opencv_photo=OFF",
@@ -492,7 +493,8 @@ class RearrangeCMakeOutput(object):
             new_scripts,
             data_files,
             # To get around a check that prepends source dir to paths and breaks package detection code.
-            cmake_source_dir=""
+            cmake_source_dir="",
+            cmake_install_dir=cmake_install_reldir,
         )
 
 
