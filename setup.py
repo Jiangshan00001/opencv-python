@@ -178,6 +178,39 @@ def main():
             "-DBUILD_DOCS=OFF",
             "-DPYTHON3_LIMITED_API=ON",
             "-DBUILD_OPENEXR=ON",
+            #ADDED FOR LITE VERSION
+            
+            "-DBUILD_PNG=ON",
+            "-DWITH_VTK=OFF",
+            "-DBUILD_opencv_calib3d=OFF",
+            "-DBUILD_opencv_features2d=OFF",
+            "-DBUILD_opencv_video=OFF",
+            "-DBUILD_opencv_videoio=OFF",
+            "-DWITH_FFMPEG=OFF",
+            "-DWITH_DIRECTX=OFF",
+            "-DWITH_DSHOW=OFF",
+            "-DWITH_EIGEN=OFF",
+            "-DWITH_GSTREAMER=OFF",
+            "-DWITH_OPENCL=OFF",
+
+            "-DBUILD_opencv_dnn=OFF",
+            "-DBUILD_opencv_photo=OFF",
+            "-DBUILD_opencv_ml=OFF",
+            "-DBUILD_opencv_objdetect=OFF",
+            "-DBUILD_opencv_highgui=OFF",
+            "-DBUILD_opencv_flann=OFF",
+            "-DBUILD_opencv_gapi=OFF",
+            "-DBUILD_opencv_python2=OFF",
+            "-DBUILD_JAVA=OFF",
+            "-DBUILD_JASPER=OFF",
+            "-DBUILD_opencv_imgcodecs=OFF",
+            "-DBUILD_opencv_imgproc=OFF",
+            "-DBUILD_opencv_java_bindings_generator=OFF",
+            "-DBUILD_opencv_js_bindings_generator=OFF",
+            "-DBUILD_opencv_objc_bindings_generator=OFF",
+
+            
+            
         ]
         + (
             # CMake flags for windows/arm64 build
@@ -459,8 +492,7 @@ class RearrangeCMakeOutput(object):
             new_scripts,
             data_files,
             # To get around a check that prepends source dir to paths and breaks package detection code.
-            cmake_source_dir="",
-            _cmake_install_dir=cmake_install_reldir,
+            cmake_source_dir=""
         )
 
 
