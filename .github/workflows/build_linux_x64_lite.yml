@@ -2,9 +2,9 @@ name: build-linux-x64-lite
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "4.x" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "4.x" ]
 
 jobs:
 
